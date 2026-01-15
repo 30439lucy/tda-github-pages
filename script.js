@@ -141,19 +141,19 @@ function selectHand(event) {
   }
 }
 // write another function that will toggle the display of the deletions by clicking on a button
-/*function toggleDeletions() {
+function toggleDeletions() {
   const dels = document.getElementsByTagName("del");
 
   for (let i = 0; i < dels.length; i++) {
     dels[i].style.display =
       dels[i].style.display === "none" ? "inline" : "none";
   }
-}*/
+}
 
 
 
 // EXTRA: write a function that will display the text as a reading text by clicking on a button or another dropdown list, meaning that all the deletions are removed and that the additions are shown inline (not in superscript)
-function toggleDeletions() {
+/*function toggleDeletions() {
   const dels = document.getElementsByTagName("del");
 
   for (let i = 0; i < dels.length; i++) {
@@ -164,4 +164,4 @@ function toggleDeletions() {
   document.querySelectorAll(".supraAdd").forEach(el => {
     el.classList.toggle("supraAdd");
   });
-}
+}*/
