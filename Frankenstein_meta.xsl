@@ -22,8 +22,20 @@
                                 </li>
                                 <li>Number of additions: 
                                     <!-- count the additions only -->
+                                    <xsl:value-of select="count(//tei:add)" />
                                 </li>
                                 <!-- add other list items in which you count things, such as the modifications made by Percy -->
+                                 <li>MWS corrections:
+        <xsl:value-of select="
+            count(//tei:add[@hand='#MWS'] | //tei:del[@hand='#MWS'])
+        "/>
+    </li>
+          <li>PBS corrections:
+        <xsl:value-of select="
+            count(//tei:add[@hand='#PBS'] | //tei:del[@hand='#PBS'])
+        "/>
+    </li>
+
                             </ul>
                         </div>
                      </div>

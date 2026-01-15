@@ -48,7 +48,8 @@
     <xsl:template match="tei:p">
         <p><xsl:apply-templates/></p>
     </xsl:template>
-
+    
+    
   <!-- processes the marginal additions again to give them a class to hide them in the 'main' text in css. By hiding them using css, they can also be made visible again when showing a reading text, for example-->
     <xsl:template match="tei:add[@place = 'marginleft']">
         <span class="marginAdd">
@@ -56,7 +57,9 @@
         </span>
     </xsl:template>
     
-    
+ 
+
+
     <xsl:template match="tei:del">
         <del>
             <xsl:attribute name="class">
@@ -75,6 +78,61 @@
     
     
     <!-- add additional templates below, for example to transform the tei:lb in <br/> empty elements, tei:hi[@rend = 'sup'] in <sup> elements, the underlined text, additions with the attribute "overwritten" etc. -->
+     
+    <xsl:template match="tei:item[@rend='right']">
+    <div class="add-below-right">
+        <xsl:apply-templates/>
+    </div>
+    </xsl:template>
 
+   <xsl:template match="text()[not(ancestor::tei:metamark[@function='pagenumber'])]">
+  <span>
+    <xsl:attribute name="class">
+      <xsl:choose>
+        <xsl:when test="../@hand = '#PBS'">PBS</xsl:when>
+        <xsl:otherwise>MWS</xsl:otherwise>
+      </xsl:choose>
+    </xsl:attribute>
+
+    <xsl:value-of select="."/>
+  </span>
+</xsl:template>
+
+
+   
+
+<xsl:template match="tei:metamark[@function='pagenumber']">
+  <div class="page-number">
+    <xsl:apply-templates/>
+  </div>
+</xsl:template>
+
+
+<xsl:template match="tei:hi[@rend='circled']">
+  <span class="circled-page-number">
+    <xsl:apply-templates/>
+  </span>
+</xsl:template>
+    
+     <xsl:template match="tei:metamark[@function='insert']">
+        <sub>
+            <xsl:apply-templates/>
+        </sub>
+    </xsl:template>
+    <xsl:template match="tei:lb">
+    <xsl:apply-templates/>
+        <br/>
+    </xsl:template>
+      <xsl:template match="tei:l">
+      <xsl:apply-templates/>
+        <br/>
+    </xsl:template>
+    
+
+    <xsl:template match="tei:add[@place = 'overwritten']">
+        <span class="overwritten">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
     
 </xsl:stylesheet>

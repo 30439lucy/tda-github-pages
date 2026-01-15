@@ -1,9 +1,10 @@
 body {
     background-color: white;
 }
+
 .starter-template {
-  padding: 40px 15px;
-  text-align: center;
+    padding: 40px 15px;
+    text-align: center;
 }
 
 img {
@@ -20,8 +21,8 @@ p {
 }
 
 .col {
-  margin-left: 10px;
-  margin-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .marginAdd {
@@ -32,4 +33,38 @@ p {
     display: none !important;
 }
 
+/*.caret {
+    position: relative;
+    top: 0.6em;
+    margin-left: -0.2em;
+    margin-right: -0.2em;
+    font-size: 0.8em;
+}
+*/
+.supraAdd {
+    position: relative;
+    top: -0.8em;
 
+    font-size: 0.75em;
+}
+
+.page-number {
+    margin-bottom: 1rem;
+    /* 和正文稍微拉開 */
+}
+
+/* 畫圈圈的頁碼 */
+.circled-page-number {
+    display: inline-block;
+    border: 2px solid black;
+    /* 圓圈線條 */
+    border-radius: 50%;
+    /* 變成圓形 */
+    padding: 0.15em 0.45em;
+    /* 控制圓圈大小 */
+    line-height: 1;
+    font-weight: bold;
+    color: black !important;
+}
+
+.add-below-right {}
