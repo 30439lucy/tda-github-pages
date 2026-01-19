@@ -1,5 +1,6 @@
 body {
-    background-color: white;
+
+    background-color: #f0f2f5;
 }
 
 .starter-template {
@@ -48,23 +49,43 @@ p {
     font-size: 0.75em;
 }
 
-.page-number {
-    margin-bottom: 1rem;
-    /* 和正文稍微拉開 */
+
+.supraAdd.is-inline {
+    position: static !important;
+    top: 0 !important;
+    font-size: 1em !important;
 }
 
-/* 畫圈圈的頁碼 */
+.page-number {
+    margin-bottom: 1rem;
+
+}
+
+
 .circled-page-number {
     display: inline-block;
     border: 2px solid black;
-    /* 圓圈線條 */
+
     border-radius: 50%;
-    /* 變成圓形 */
+
     padding: 0.15em 0.45em;
-    /* 控制圓圈大小 */
+
     line-height: 1;
     font-weight: bold;
     color: black !important;
 }
 
-.add-below-right {}
+.tei-note {
+    display: none;
+    color: #6f42c1;
+    /* 灰色 */
+    font-size: 0.9em;
+    background-color: #f8f9fa;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+
+.tei-note.show-me {
+    display: inline !important;
+}

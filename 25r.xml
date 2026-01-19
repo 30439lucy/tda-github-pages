@@ -38,8 +38,8 @@
                <l>believe that so great a good fortune</l>
                <l>could have befallen me; but when</l>
                <l>I 
-                   <del type="crossedOut" hand="#PBS" rend="black ink">was</del>
-                   <add hand="#PBS" place="supralinear">became</add>
+                   <del type="crossedOut" hand="#MWS" rend="black ink">was</del>
+                   <add hand="#PBS" place="supralinear" rend="black ink">became</add>
                    assured that my enemy had</l>
                <l>indeed fled, I clapped my hands for</l>
                <l>joy and ran down to Henry.</l>
@@ -52,15 +52,15 @@
                <l>pulse beat rapidly. I was unable to</l>
                <l>remain for a single instant in</l>
                <l>the same place — I jumped over</l>
-               <l>the chairs, clapped my hand<add hand="#MWS" place="intralinear">s</add> &amp; laughed</l>
+               <l>the chairs, clapped my hand<add hand="#MWS" place="intralinear" rend="black ink">s</add> &amp; laughed</l>
                <l>aloud. Clerval at first attributed</l>
                <l>my unusual spirits to joy
                   <del type="crossedOut" hand="#MWS" rend="black ink">at</del>
-                  <add hand="#MWS" place="supralinear">on</add>
+                  <add hand="#MWS" place="supralinear" rend="black ink">on</add>
                   his</l>
                <l>arrival– but when <del type="crossedOut" hand="#MWS" rend="black ink">saw</del> he observed</l>
-               <l>me <add hand="#PBS" place="inline" rend="black ink"><metamark>^</metamark></add>
-                     <add hand="#PBS" place="supralinear">more attentively</add>
+               <l>me <add hand="#PBS" place="inline" rend="black ink"><metamark function= "insert">^</metamark></add>
+                     <add hand="#PBS" place="supralinear" rend="black ink">more attentively</add>
                      he saw a wildness in my eyes for</l>
                <l>which he could not account and</l>
                <l>my loud unrestrained heartless laugh</l>

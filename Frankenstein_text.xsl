@@ -58,7 +58,12 @@
     </xsl:template>
     
  
-
+ <xsl:template match="tei:note">
+        <span class="tei-note">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
 
     <xsl:template match="tei:del">
         <del>
@@ -79,6 +84,12 @@
     
     <!-- add additional templates below, for example to transform the tei:lb in <br/> empty elements, tei:hi[@rend = 'sup'] in <sup> elements, the underlined text, additions with the attribute "overwritten" etc. -->
      
+ <xsl:template match="tei:hi[@rend='u']">
+    <u>
+        <xsl:apply-templates/>
+    </u>
+    </xsl:template>
+
     <xsl:template match="tei:item[@rend='right']">
     <div class="add-below-right">
         <xsl:apply-templates/>

@@ -152,16 +152,30 @@ function toggleDeletions() {
 
 
 
-// EXTRA: write a function that will display the text as a reading text by clicking on a button or another dropdown list, meaning that all the deletions are removed and that the additions are shown inline (not in superscript)
-/*function toggleDeletions() {
+//EXTRA: write a function that will display the text as a reading text by clicking on a button or another dropdown list, meaning that all the deletions are removed and that the additions are shown inline (not in superscript)
+function ReadingText() {
   const dels = document.getElementsByTagName("del");
 
   for (let i = 0; i < dels.length; i++) {
     dels[i].style.display =
       dels[i].style.display === "none" ? "inline" : "none";
   }
-  // .supraAdd=>可以先抓add tag 但不一定每個add都是在上面的
-  document.querySelectorAll(".supraAdd").forEach(el => {
-    el.classList.toggle("supraAdd");
+  const targets = document.querySelectorAll(".supraAdd");
+  console.log("找到的目標數量：", targets.length);
+  targets.forEach(el => {
+
+    el.classList.toggle("is-inline");
   });
-}*/
+}
+
+
+function toggleNotes() {
+  // 找出所有 note 和 metamark
+  const elements = document.querySelectorAll(".tei-note");
+
+  elements.forEach(el => {
+    // 如果原本沒顯示，這行會加上 .show-me (顯示)
+    // 如果原本已顯示，這行會移除 .show-me (隱藏)
+    el.classList.toggle("show-me");
+  });
+}
